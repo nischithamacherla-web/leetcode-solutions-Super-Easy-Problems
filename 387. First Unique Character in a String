@@ -1,0 +1,7 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        count = Counter(s) #Counter() Counts frequency of each character in the string s
+        for index, char in enumerate(s): #enumerate() used to get index and value
+            if count[char] == 1:
+                return index
+        return -1
